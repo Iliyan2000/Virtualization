@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bayes Classifier Result</title>
+    <style>
+        body {
+            font-family: 'Arial';
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h1 {
+            color: black;
+            background-color: #4caf50;
+            padding: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+
+        p.positive {
+			font-size: 2em;
+            color: green;
+        }
+
+        p.negative {
+			font-size: 2em;
+            color: red;
+        }
+		input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+			box-sizing: border-box;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: lightgreen;
+            color: black;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Classification Result</h1>
+    {% if result.startswith('+') %}
+        <p class="positive">{{ result }}</p>
+    {% else %}
+        <p class="negative">{{ result }}</p>
+    {% endif %}
+	
+	<form action="/" method="get">
+        <input type="submit" value="Back">
+    </form>
+</body>
+</html>

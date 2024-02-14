@@ -1,0 +1,7 @@
+Using for a bayes_classifier
+1. sudo docker build -f ./bayes_classifier/Dockerfile -t bayes_classifier .
+2. sudo docker run -p 5000:5000 bayes_classifier
+
+Using for a bayes_classifier_numpy
+1. sudo docker build -f ./bayes_classifier_numpy/Dockerfile -t bayes_classifier_numpy .
+2. sudo docker run -p 5001:5001 bayes_classifier_numpy
